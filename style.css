@@ -3,6 +3,9 @@
     background: #1f2937;
     color: #ffffff;
     display: flex;
+    position: fixed;
+    width: 1920px;
+    flex-shrink: 1;
   }
 
   .sticky {
@@ -21,6 +24,14 @@
     flex: 1;
     align-items: center;
   }
+
+  @media screen and (max-width: 1200px) {
+    /* styles for screens smaller than 600px */
+    .container {
+      height: 800px;
+    }
+  }
+  
 
   .title {
     width: 1200px;
@@ -65,18 +76,6 @@ h3 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
-  button {
-    background-color: #3882f6;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-    height: 50px;
-  }
-
   .threelinks
   {
     color: #ffffff;
@@ -104,10 +103,16 @@ h3 {
     justify-content: center;
     gap: 60px;
     margin-bottom: 100px;
+    flex: 1;
   }
 
-.container2 {
-  width: 1920px;
+@media screen and (max-width: 1000px) {
+  /* styles for screens smaller than 1000px */
+  .title2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 h4 {
@@ -117,10 +122,12 @@ h4 {
 }
 
 .image1 {
-  width: 310px;
+  width: 300px;
   height: auto;
   border-radius: 15px;
-  border: 5px solid #555;
+  box-shadow: 0 0 0 2px #3882f6;
+  overflow: hidden;
+  display: flex;
 }
 
 p {
@@ -133,9 +140,9 @@ p {
 
 .container3 {
   background-color: #E5E7EB;
-  width: 1920px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 h6 {
@@ -160,10 +167,9 @@ body {
 }
 
 .container4 {
-  width: 1600px;
   background-color: #3882f6;
   margin: 100px;
-  margin-left: 150px;
+  margin-left: 100px;
   display: flex;
   align-items: center;
 }
@@ -173,7 +179,7 @@ body {
   color: #E5E7EB;
   display: flex;
   flex-direction: column;
-  width: 1200px;
+  flex: 1;
 }
 
 h8 {
@@ -185,15 +191,25 @@ h9 {
   font-size: 16px;
 }
 
-.button2 {
+.btn-primary {
   background-color: #3882f6;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  border: none;
+  padding: 10px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 10px;
   height: 50px;
-  border-color: azure;
+  width: 100px;
+}
+
+.btn-secondary {
+  background-color: #3882f6;
+  color: white;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  height: 50px;
+  width: 100px;
+  margin-right: 50px;
 }
