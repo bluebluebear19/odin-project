@@ -4,18 +4,14 @@
     color: #ffffff;
     display: flex;
     position: fixed;
-    width: 1920px;
-    flex-shrink: 1;
+    flex: 1;
+    width: 100%;
   }
 
   .sticky {
     position: fixed;
     top: 0;
     width: 100%
-  }
-
-  h2 {
-    width: 900px;
   }
 
   .container {
@@ -85,7 +81,9 @@ h3 {
     gap: 25px;
     justify-content: right;
     align-items: center;
-    width: 750px;
+    padding-right: 200px;
+    padding-left: 50px;
+    flex: 1;
   }
 
   a { 
